@@ -10,7 +10,7 @@ export type HeadingSize = "large" | "medium" | "small";
 export type ButtonSize = "large" | "medium" | "small";
 export type ButtonScheme = "primary" | "normal";
 export type LayoutWidth = "large" | "medium" | "small";
-
+export type ViewMode = "grid" | "list";
 interface Theme {
   name: ThemeName;
   color: {
