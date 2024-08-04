@@ -7,7 +7,10 @@ interface StoreState {
 }
 
 export const getToken = () => {
+  console.log("!!");
   const token = localStorage.getItem("token");
+  console.log(token);
+  console.log("!!");
   return token;
 };
 

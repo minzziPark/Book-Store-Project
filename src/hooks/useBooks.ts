@@ -18,7 +18,6 @@ export const useBooks = () => {
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
-
     console.log("params", params);
     fetchBooks({
       category_id: params.get(QUERYSTRING.CATEGORY_ID)

@@ -67,5 +67,4 @@ const BooksFilterStyle = styled.div`
     gap: 8px;
   }
 `;
-
 export default BooksFilter;
