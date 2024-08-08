@@ -1,6 +1,5 @@
 import Layout from "./components/layout/Layout";
 import Home from "./pages/Home";
-import ThemeSwitcher from "./components/header/ThemeSwitcher";
 import { BookStoreThemeProvider } from "./context/themeContext";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Error from "./components/common/Error";
@@ -11,6 +10,7 @@ import Books from "./pages/Books";
 import BookDetail from "./pages/BookDetail";
 import Cart from "./pages/Cart";
 import Order from "./pages/Order";
+import OrderList from "./pages/OrderList";
 
 const router = createBrowserRouter([
   {
@@ -82,12 +82,19 @@ const router = createBrowserRouter([
       </Layout>
     ),
   },
+  {
+    path: "/orderlist",
+    element: (
+      <Layout>
+        <OrderList />
+      </Layout>
+    ),
+  },
 ]);
 
 function App() {
   return (
     <BookStoreThemeProvider>
-      <ThemeSwitcher />
       <RouterProvider router={router} />
     </BookStoreThemeProvider>
   );
